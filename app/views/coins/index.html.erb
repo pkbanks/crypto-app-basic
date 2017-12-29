@@ -1,0 +1,8 @@
+<!-- view -->
+<h1>Coins</h1>
+
+<ul>
+  <% @coins.each do |coin| %>
+    <li><%= "#{coin.name} (#{coin.abbreviation || '-'}) - #{((coin.price || 0)/100).to_f || '-'}" %></li>
+  <% end %>
+</ul>
